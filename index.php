@@ -64,38 +64,19 @@ $hotels = [
     </tr>
   </thead>
   <tbody>
-
   <?php
             foreach($hotels as $hotel) {
-            foreach ($hotel as $chiave => $valore) {
                 echo "<tr>
                 <td>" . $hotel['name']. "</td>
                 <td>" . $hotel['description']. "</td>
-                <td>" . $hotel['parking']. "</td>
+                <td>" . ($hotel['parking']?'Si':'No'). "</td>
                 <td>" . $hotel['vote']. "</td>
                 <td>" . $hotel['distance_to_center']. "</td>
                 </tr>";
-                      }
             }
             ?>
   </tbody>
 </table>
-
-<hr>
-            <ul>
-            <?php
-            foreach($hotels as $hotel) {
-            foreach ($hotel as $chiave => $valore) {
-            echo "<li>" . $chiave . ' - ' . $valore .  "</li>"; 
-            }
-            }
-            ?>
-            </ul>
 </body>
 
 </html>
-
-<!-- <td>" . $hotel['description'] . "</td>
-                <td>" . $hotel['parking'] . "</td>
-                <td>" . $hotel['vote'] . "</td>
-                <td>" . $hotel['distance_to_center'] . "</td> -->
