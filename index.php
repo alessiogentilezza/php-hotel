@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <title>PHP Hotel</title>
 </head>
 
@@ -50,30 +51,53 @@ $hotels = [
     ],
     
 ];
-/*
-foreach($hotels as $hotel) {
-foreach ($hotel as $chiave => $valore) {
-echo $chiave . ' - ' . $valore .'<hr>'; 
-}
-}
-
-*/
-
 ?>
 
+<table class="table">
+  <thead>
+    <tr>
+    <th scope="col">nome</th>
+      <th scope="col">descrizione</th>
+      <th scope="col">parcheggio</th>
+      <th scope="col">voto</th>
+      <th scope="col">distanza</th>
+    </tr>
+  </thead>
+  <tbody>
 
-    <div>
-        <ul>
-            <?php
-                    foreach($hotels as $hotel) {
-                    foreach ($hotel as $chiave => $valore) {
-                            echo "<li>" . $chiave . ' - ' . $valore .  "</li>"; 
-                            }
-                    }
+  <?php
+            foreach($hotels as $hotel) {
+            foreach ($hotel as $chiave => $valore) {
+
+                echo "<tr>
+                <td>" . $hotel['name'] . "</td>
+                <td>" . $hotel['description'] . "</td>
+                <td>" . $hotel['parking'] . "</td>
+                <td>" . $hotel['vote'] . "</td>
+                <td>" . $hotel['distance_to_center'] . "</td>
+                </tr>";
+
+                      }
+            }
             ?>
-        </ul>
-    </div>
+  </tbody>
+</table>
 
+<hr>
+            <ul>
+            <?php
+            foreach($hotels as $hotel) {
+            foreach ($hotel as $chiave => $valore) {
+            echo "<li>" . $chiave . ' - ' . $valore .  "</li>"; 
+            }
+            }
+            ?>
+            </ul>
 </body>
 
 </html>
+
+<!-- <td>" . $hotel['description'] . "</td>
+                <td>" . $hotel['parking'] . "</td>
+                <td>" . $hotel['vote'] . "</td>
+                <td>" . $hotel['distance_to_center'] . "</td> -->
