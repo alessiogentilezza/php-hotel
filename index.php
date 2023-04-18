@@ -68,15 +68,13 @@ $hotels = [
   <?php
             foreach($hotels as $hotel) {
             foreach ($hotel as $chiave => $valore) {
-
                 echo "<tr>
-                <td>" . $hotel['name'] . "</td>
-                <td>" . $hotel['description'] . "</td>
-                <td>" . $hotel['parking'] . "</td>
-                <td>" . $hotel['vote'] . "</td>
-                <td>" . $hotel['distance_to_center'] . "</td>
+                <td>" . $hotel['name']. "</td>
+                <td>" . $hotel['description']. "</td>
+                <td>" . $hotel['parking']. "</td>
+                <td>" . $hotel['vote']. "</td>
+                <td>" . $hotel['distance_to_center']. "</td>
                 </tr>";
-
                       }
             }
             ?>
