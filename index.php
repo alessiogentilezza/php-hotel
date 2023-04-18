@@ -50,16 +50,30 @@ $hotels = [
     ],
     
 ];
-
+/*
 foreach($hotels as $hotel) {
 foreach ($hotel as $chiave => $valore) {
 echo $chiave . ' - ' . $valore .'<hr>'; 
 }
 }
 
+*/
+
 ?>
 
 
+    <div>
+        <ul>
+            <?php
+                    foreach($hotels as $hotel) {
+                    foreach ($hotel as $chiave => $valore) {
+                            echo "<li>" . $chiave . ' - ' . $valore .  "</li>"; 
+                            }
+                    }
+            ?>
+        </ul>
+    </div>
 
 </body>
+
 </html>
